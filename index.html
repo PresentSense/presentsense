@@ -3,33 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Project: Feedback System</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>PresentSense</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Link to external CSS file -->
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <!-- PresentSense Logo -->
             <a class="navbar-brand" href="#">
-                <img src="photos/presentsense-logo.png" alt="PresentSense Logo" style="height: 40px;">
+                <img src="photos/presentSenseLogo.svg" alt="PresentSense Logo" class="logo">
                 PresentSense
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#team">Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#project">Project</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#awards">Awards</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -39,18 +44,19 @@
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="text-center py-5">
+    <!-- Hero Section -->
+    <header class="hero-section text-center">
         <div class="container">
-            <h1>PresentSense</h1>
+            <h1 class="display-3 fw-bold">PresentSense</h1>
             <p class="lead">Improving presentation skills through innovative feedback solutions</p>
+            <a href="#project" class="btn btn-primary btn-lg mt-3">Learn More</a>
         </div>
     </header>
 
     <!-- Team Section -->
     <section id="team" class="team-section text-center">
         <div class="container">
-            <h2 class="mb-5">Meet Our Team</h2>
+            <h2 class="section-title mb-5">Meet Our Team</h2>
             <div class="row justify-content-center">
                 <!-- Supervisor (Central Position) -->
                 <div class="col-lg-6">
@@ -62,6 +68,15 @@
                             <a href="https://www.linkedin.com/in/sinem-sav-5b949265/" target="_blank"><i class="fab fa-linkedin"></i></a>
                             <a href="https://sinemsav.github.io/pages/sinemsav.html" target="_blank"><i class="fas fa-globe"></i></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group Photo -->
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-10">
+                    <div class="group-photo-container">
+                        <img src="photos/group-photo.jpeg" alt="PresentSense Team" class="img-fluid rounded shadow">
                     </div>
                 </div>
             </div>
@@ -127,7 +142,7 @@
                 <!-- Tuna Okcu -->
                 <div class="col-lg-6">
                     <div class="profile">
-                        <img src="photos/tuna-photo.jpg" alt="Tuna Okcu" class="profile-pic">
+                        <img src="photos/tuna-photo.jpg" alt="Tuna Okçu" class="profile-pic">
                         <h4>Tuna Okçu</h4>
                         <!-- <p>Role in the project.</p> -->
                         <div class="social-links">
@@ -144,48 +159,121 @@
     <!-- Project Details Section -->
     <section id="project" class="project-details">
         <div class="container">
-            <h2 class="text-center mb-5">Project Overview</h2>
+            <h2 class="section-title text-center mb-5">Project Overview</h2>
             
-            <p>
-                PresentSense is an AI tool designed to aid academics, students, and other public presenters in improving and honing their presentation techniques. The assistant uses state-of-the-art technologies like computer vision and machine learning.
-            </p>
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-6">
+                    <h3 class="feature-title">AI-Powered Analysis</h3>
+                    <p>
+                        PresentSense is an AI tool designed to aid academics, students, and other public presenters in improving and honing their presentation techniques. The assistant uses state-of-the-art technologies like computer vision and machine learning.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-icon-container text-center">
+                        <i class="fas fa-brain feature-icon"></i>
+                    </div>
+                </div>
+            </div>
             
-            <p>
-                The project allows users to select their preferred presentation style, taking into account their time limits and preferences, before beginning presentation analysis. Subsequently, to provide post-presentation feedback, the speech is aligned with the presentation document that the user uploads.
-            </p>
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-6 order-lg-2">
+                    <h3 class="feature-title">Personalized Feedback</h3>
+                    <p>
+                        The project allows users to select their preferred presentation style, taking into account their time limits and preferences, before beginning presentation analysis. Subsequently, to provide post-presentation feedback, the speech is aligned with the presentation document that the user uploads.
+                    </p>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="feature-icon-container text-center">
+                        <i class="fas fa-comments feature-icon"></i>
+                    </div>
+                </div>
+            </div>
             
-            <p>
-                While analyzing the speaker, the system evaluates the speaker's tone, speech patterns, and facial expressions. As a result, it assists users in enhancing their delivery, which includes modifying their tone, gestures, and slide content.
-            </p>
+            <div class="row align-items-center mb-4">
+                <div class="col-lg-6">
+                    <h3 class="feature-title">Comprehensive Analysis</h3>
+                    <p>
+                        While analyzing the speaker, the system evaluates the speaker's tone, speech patterns, and facial expressions. As a result, it assists users in enhancing their delivery, which includes modifying their tone, gestures, and slide content.
+                    </p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-icon-container text-center">
+                        <i class="fas fa-chart-bar feature-icon"></i>
+                    </div>
+                </div>
+            </div>
             
-            <p>
-                By analyzing the feedback that presenters receive after submitting their presentations to the system, PresentSense provides customized recommendations to enhance the overall impact of their presentations.
-            </p>
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <h3 class="feature-title">Tailored Recommendations</h3>
+                    <p>
+                        By analyzing the feedback that presenters receive after submitting their presentations to the system, PresentSense provides customized recommendations to enhance the overall impact of their presentations.
+                    </p>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="feature-icon-container text-center">
+                        <i class="fas fa-lightbulb feature-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards-section text-center py-5">
+        <div class="container">
+            <h2 class="section-title mb-5">Awards & Recognition</h2>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="award-card">
+                        <img src="photos/award-photo.jpeg" alt="Award at İlk Yatırımım Event" class="img-fluid rounded shadow-sm mb-3">
+                        <h3>İlk Yatırımım Event Winner</h3>
+                        <p class="award-value">$10,000 AWS Credits</p>
+                        <p>Our team won $10,000 in AWS credits at the İlk Yatırımım event for our innovative presentation feedback system.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="award-card">
+                        <img src="photos/group-photo.jpeg" alt="PresentSense Team" class="img-fluid rounded shadow-sm mb-3">
+                        <h3>Lonca Recognition</h3>
+                        <p class="award-value">$5,000 AWS Credits</p>
+                        <p>We were awarded $5,000 in AWS credits from Lonca for our groundbreaking approach to improve presentation skills.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- GitHub Project Link Section -->
     <section id="github-link" class="text-center py-5">
         <div class="container">
-            <h2>Check Out Our Project on GitHub</h2>
+            <h2 class="section-title">Check Out Our Project on GitHub</h2>
             <p>Visit our GitHub repository to see the project code!</p>
-            <a href="https://github.com/PresentSense" class="btn btn-dark" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            <a href="https://github.com/PresentSense" class="btn btn-dark btn-lg mt-3" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
         </div>
     </section>
 
    <!-- Contact Section -->
-    <section id="contact" class="text-center py-5 bg-dark text-white">
+    <section id="contact" class="text-center py-5">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2 class="section-title">Contact Us</h2>
             <p>If you have any questions, feel free to reach out!</p>
-            <a href="mailto:arda.bakir@ug.bilkent.edu.tr" class="btn btn-grey">Email Us</a>
+            <a href="mailto:presentsense.contact@gmail.com" class="btn btn-primary btn-lg mt-3">
+                <i class="fas fa-envelope me-2"></i> Email Us
+            </a>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="footer text-center py-4">
+        <div class="container">
+            <p>&copy; 2025 PresentSense. All rights reserved.</p>
+        </div>
+    </footer>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
