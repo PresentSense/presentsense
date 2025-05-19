@@ -220,9 +220,11 @@ body {
 
 .award-card img {
     width: 100%;
-    height: 200px; /* Fixed height for all award images */
+    height: 200px !important; /* Fixed height for all award images with !important to override Bootstrap */
     object-fit: cover; /* Maintain aspect ratio while covering the container */
     object-position: center; /* Center the image within the container */
+    display: block; /* Ensure block display */
+    margin-bottom: 15px; /* Consistent margin */
 }
 
 .award-value {
