@@ -27,7 +27,7 @@ To run the project locally:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/PresentSense/presentsense-project.git
+   git clone https://github.com/PresentSense/presentsense
    ```
 
 2. Navigate to the project directory:
